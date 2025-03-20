@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pousada Encanto da Serra</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header id="subscription">
+      <div id="description">
+        <h1>POUSADA ENCANTO DA SERRA</h1>
+        <p class="about-me">
+          Bem-vindo ao nosso refúgio! Prepare-se para dias de descanso e
+          momentos inesquecíveis.
+        </p>
+      </div>
+      <div id="subscription-form">
+        <p>Preencha o formulário e reserve sua vaga.</p>
+        <form>
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" name="name" placeholder="Digite seu nome" />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Digite seu melhor e-mail"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefone</label>
+            <input type="phone" name="phone" placeholder="(XX) XXXXX-XXXX" />
+          </div>
+          <div class="form-group">
+            <label for="suites">Suítes</label>
+            <select name="" id="">
+              <option value="" disabled selected>-- Selecione --</option>
+              <option value="suite-simples">Suíte Simples</option>
+              <option value="suite-luxo">Suíte Luxo</option>
+              <option value="suite-presidencial">Suíte Presidencial</option>
+            </select>
+          </div>
+          <input type="submit" class="btn" value="Reservar" />
+        </form>
+      </div>
+    </header>
+    <section id="suites">
+      <h1>Confira nossas suítes</h1>
+      <div class="suites-container">
+        <div
+          class="suite"
+          data-price="R$ 150,00 por noite"
+          data-amenities="Wi-Fi, TV, Ar-condicionado"
+          data-availability="Disponível"
+        >
+          <img src="./img/suite-simples.jpg" alt="Suíte Simples" />
+          <h3>Suíte Simples</h3>
+          <p>Conforto e praticidade para sua estadia.</p>
+        </div>
+        <div
+          class="suite"
+          data-price="R$ 250,00 por noite"
+          data-amenities="Wi-Fi, TV, Ar-condicionado, Banheira"
+          data-availability="Últimos quartos disponíveis!"
+        >
+          <img src="./img/suite-luxo.jpg" alt="Suíte Luxo" />
+          <h3>Suíte Luxo</h3>
+          <p>Mais espaço e sofisticação para você.</p>
+        </div>
+        <div
+          class="suite"
+          data-price="R$ 400,00 por noite"
+          data-amenities="Wi-Fi, TV, Ar-condicionado, Hidromassagem"
+          data-availability="Apenas 1 suíte restante!"
+        >
+          <img src="./img/suite-presidencial.avif" alt="Suíte Presidencial" />
+          <h3>Suíte Presidencial</h3>
+          <p>O máximo em conforto e exclusividade.</p>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p>Descubra um refúgio de tranquilidade e beleza natural.</p>
+    </section>
+    <section id="depoimentos">
+      <h1>O que nossos hóspedes dizem</h1>
+      <div class="depoimentos-container">
+        <div class="depoimento-card pequeno">
+          <img
+            class="depoimento-img"
+            src="./img/hospede1.jpg"
+            alt="Foto de Ana Souza"
+          />
+          <p class="depoimento-texto">
+            "Lugar incrível! Voltarei com certeza!"
+          </p>
+          <h3 class="depoimento-nome">- Ana Souza</h3>
+        </div>
+        <div class="depoimento-card grande">
+          <img
+            class="depoimento-img"
+            src="./img/hospede2.jpg"
+            alt="Foto de Carlos Oliveira"
+          />
+          <p class="depoimento-texto">
+            "Atendimento impecável, quartos confortáveis e café da manhã
+            delicioso!"
+          </p>
+          <h3 class="depoimento-nome">- Carlos Oliveira</h3>
+        </div>
+        <div class="depoimento-card pequeno">
+          <img
+            class="depoimento-img"
+            src="./img/hospede3.jpg"
+            alt="Foto de Mariana Lima"
+          />
+          <p class="depoimento-texto">
+            "Foi uma experiência maravilhosa! Recomendo a todos!"
+          </p>
+          <h3 class="depoimento-nome">- Mariana Lima</h3>
+        </div>
+      </div>
+    </section>
+    <section id="details">
+      <div class="detail" id="detail-1">
+        <img src="./img/detail-1.jpg" alt="acampamento" />
+        <div class="detail-description">
+          <h3>
+            É possível encontrar locais para acampar que atendem a diferentes
+            preferências, desde quem busca aventura e isolamento até quem
+            prefere conforto e comodidades.
+          </h3>
+        </div>
+      </div>
+      <div class="detail" id="detail-2">
+        <div class="detail-description">
+          <h3>
+            Vistas panorâmicas de tirar o fôlego, onde a beleza natural se
+            revela em toda a sua grandiosidade.
+          </h3>
+        </div>
+        <img src="./img/detail-2.jpg" alt="paisagem" />
+      </div>
+      <div class="detail" id="detail-3">
+        <img src="./img/detail-3.jpg" alt="trilha" />
+        <div class="detail-description">
+          <h3>
+            Desconecte-se da rotina e reconecte-se com a natureza! Nossas
+            trilhas são um convite ao bem-estar, com paisagens relaxantes e ar
+            puro.
+          </h3>
+        </div>
+      </div>
+    </section>
+    <section id="localizacao">
+      <div class="info-local">
+        <h2>Encontre-nos Aqui!</h2>
+        <p>Estamos situados em meio às deslumbrantes montanhas da Serra Encantada, proporcionando uma experiência única de tranquilidade e conexão com a natureza.</p>
+    <p><strong>Endereço:</strong> Estrada das Montanhas, km 12 - Serra Encantada, BR</p>
+    <p><strong>Telefone:</strong> (99) 9999-9999</p>
+    <p><strong>Email:</strong> pousadaencantodaserra@email.com</p>
+      </div>
+      <div class="mapa">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093748!2d144.9537363153173!3d-37.81627974201415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577ce4e51df9472!2sPlaceholder!5e0!3m2!1sen!2sbr!4v1614118472364!5m2!1sen!2sbr" 
+          allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </section>
+    <section id="cta">
+      <h3>Não Perca Tempo, Reserve Agora!</h3>
+      <button class="btn">Fazer Reserva</button>
+    </section>
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <p><span>Email: </span>pousadaencantodaserra@email.com</p>
+          <p><span>Telefone: </span>(99) 999999-9999</p>
+        </div>
+        <div class="footer-section">
+          <h3>Localização</h3>
+          <p>Estrada das Montanhas, km 12 - Serra Encantada, BR</p>
+        </div>
+        <div class="footer-section social-icons">
+          <h3>Redes Sociais</h3>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="X">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
