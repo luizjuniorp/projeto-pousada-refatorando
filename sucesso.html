@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserva Confirmada | Pousada Encanto da Serra</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #f8f8f8, #edf3ec);
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .success-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .success-card {
+        max-width: 700px;
+        background: #fff;
+        border-radius: 20px;
+        padding: 3rem 2rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        text-align: center;
+      }
+
+      .success-card i {
+        font-size: 4rem;
+        color: #1e421c;
+        margin-bottom: 1rem;
+      }
+
+      .success-card h1 {
+        color: #1e421c;
+        margin-bottom: 1rem;
+      }
+
+      .success-card p {
+        color: #444;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+      }
+
+      .success-resume {
+        background: #f4f6ef;
+        padding: 1rem;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+      }
+
+      .btn-success {
+        display: inline-block;
+        background: #eae665;
+        color: #1e421c;
+        font-weight: 700;
+        padding: 0.9rem 1.4rem;
+        border-radius: 12px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="success-page">
+      <div class="success-card">
+        <i class="fa-solid fa-circle-check"></i>
+        <h1>Reserva confirmada!</h1>
+        <p>
+          Sua solicitação foi recebida com sucesso. Em breve nossa equipe entrará em contato para confirmar os detalhes da sua estadia.
+        </p>
+
+        <div class="success-resume" id="success-resume"></div>
+        <a href="index.html" class="btn-success">Voltar para a pousada</a>
+      </div>
+    </main>
+
+    <script>
+      const resumo = document.getElementById('success-resume');
+      const reserva = JSON.parse(localStorage.getItem('ultimaReserva') || '{}');
+
+      if (reserva && reserva.suite) {
+        resumo.innerHTML = `
+          <strong>Suíte:</strong> ${reserva.suite}<br>
+          <strong>Entrada:</strong> ${reserva.entrada}<br>
+          <strong>Saída:</strong> ${reserva.saida}<br>
+          <strong>Hóspedes:</strong> ${reserva.hospedes}
+        `;
+      } else {
+        resumo.innerHTML = '<strong>Reserva registrada com sucesso.</strong>';
+      }
+    </script>
+  </body>
+</html>

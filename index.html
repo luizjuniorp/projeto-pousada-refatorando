@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -28,7 +28,7 @@
       </div>
       <div id="subscription-form">
         <p>Preencha o formulário e reserve sua vaga.</p>
-        <form>
+        <form id="hero-reservation-form">
           <div class="form-group">
             <label for="name">Nome</label>
             <input type="text" name="name" placeholder="Digite seu nome" />
@@ -47,7 +47,7 @@
           </div>
           <div class="form-group">
             <label for="suites">Suítes</label>
-            <select name="" id="">
+            <select name="suite" id="suite-select">
               <option value="" disabled selected>-- Selecione --</option>
               <option value="suite-simples">Suíte Simples</option>
               <option value="suite-luxo">Suíte Luxo</option>
@@ -55,14 +55,17 @@
             </select>
           </div>
           <input type="submit" class="btn" value="Reservar" />
+          <div class="form-feedback" aria-live="polite"></div>
         </form>
       </div>
     </header>
+
     <section id="suites">
       <h1>Confira nossas suítes</h1>
       <div class="suites-container">
         <div
           class="suite"
+          data-id="suite-simples"
           data-price="R$ 150,00 por noite"
           data-amenities="Wi-Fi, TV, Ar-condicionado"
           data-availability="Disponível"
@@ -70,9 +73,16 @@
           <img src="./img/suite-simples.jpg" alt="Suíte Simples" />
           <h3>Suíte Simples</h3>
           <p>Conforto e praticidade para sua estadia.</p>
+          <div class="suite-actions">
+            <a href="detalhes.html?id=suite-simples" class="btn btn-details">
+              Ver detalhes
+            </a>
+          </div>
         </div>
+
         <div
           class="suite"
+          data-id="suite-luxo"
           data-price="R$ 250,00 por noite"
           data-amenities="Wi-Fi, TV, Ar-condicionado, Banheira"
           data-availability="Últimos quartos disponíveis!"
@@ -80,9 +90,16 @@
           <img src="./img/suite-luxo.jpg" alt="Suíte Luxo" />
           <h3>Suíte Luxo</h3>
           <p>Mais espaço e sofisticação para você.</p>
+          <div class="suite-actions">
+            <a href="detalhes.html?id=suite-luxo" class="btn btn-details">
+              Ver detalhes
+            </a>
+          </div>
         </div>
+
         <div
           class="suite"
+          data-id="suite-presidencial"
           data-price="R$ 400,00 por noite"
           data-amenities="Wi-Fi, TV, Ar-condicionado, Hidromassagem"
           data-availability="Apenas 1 suíte restante!"
@@ -90,12 +107,22 @@
           <img src="./img/suite-presidencial.avif" alt="Suíte Presidencial" />
           <h3>Suíte Presidencial</h3>
           <p>O máximo em conforto e exclusividade.</p>
+          <div class="suite-actions">
+            <a
+              href="detalhes.html?id=suite-presidencial"
+              class="btn btn-details"
+            >
+              Ver detalhes
+            </a>
+          </div>
         </div>
       </div>
     </section>
+
     <section id="about">
       <p>Descubra um refúgio de tranquilidade e beleza natural.</p>
     </section>
+
     <section id="depoimentos">
       <h1>O que nossos hóspedes dizem</h1>
       <div class="depoimentos-container">
@@ -105,9 +132,7 @@
             src="./img/hospede1.jpg"
             alt="Foto de Ana Souza"
           />
-          <p class="depoimento-texto">
-            "Lugar incrível! Voltarei com certeza!"
-          </p>
+          <p class="depoimento-texto">"Lugar incrível! Voltarei com certeza!"</p>
           <h3 class="depoimento-nome">- Ana Souza</h3>
         </div>
         <div class="depoimento-card grande">
@@ -135,6 +160,7 @@
         </div>
       </div>
     </section>
+
     <section id="details">
       <div class="detail" id="detail-1">
         <img src="./img/detail-1.jpg" alt="acampamento" />
@@ -166,25 +192,33 @@
         </div>
       </div>
     </section>
+
     <section id="localizacao">
       <div class="info-local">
         <h2>Encontre-nos Aqui!</h2>
-        <p>Estamos situados em meio às deslumbrantes montanhas da Serra Encantada, proporcionando uma experiência única de tranquilidade e conexão com a natureza.</p>
-    <p><strong>Endereço:</strong> Estrada das Montanhas, km 12 - Serra Encantada, BR</p>
-    <p><strong>Telefone:</strong> (99) 9999-9999</p>
-    <p><strong>Email:</strong> pousadaencantodaserra@email.com</p>
+        <p>
+          Estamos situados em meio às deslumbrantes montanhas da Serra Encantada,
+          proporcionando uma experiência única de tranquilidade e conexão com a
+          natureza.
+        </p>
+        <p><strong>Endereço:</strong> Estrada das Montanhas, km 12 - Serra Encantada, BR</p>
+        <p><strong>Telefone:</strong> (99) 9999-9999</p>
+        <p><strong>Email:</strong> pousadaencantodaserra@email.com</p>
       </div>
       <div class="mapa">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093748!2d144.9537363153173!3d-37.81627974201415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577ce4e51df9472!2sPlaceholder!5e0!3m2!1sen!2sbr!4v1614118472364!5m2!1sen!2sbr" 
-          allowfullscreen="" loading="lazy">
-        </iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093748!2d144.9537363153173!3d-37.81627974201415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577ce4e51df9472!2sPlaceholder!5e0!3m2!1sen!2sbr!4v1614118472364!5m2!1sen!2sbr"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
       </div>
     </section>
+
     <section id="cta">
       <h3>Não Perca Tempo, Reserve Agora!</h3>
-      <button class="btn">Fazer Reserva</button>
+      <a href="#subscription" class="btn btn-anchor">Fazer Reserva</a>
     </section>
+
     <footer id="footer">
       <div class="footer-container">
         <div class="footer-section">
@@ -210,6 +244,7 @@
         </div>
       </div>
     </footer>
+
     <script src="./js/script.js"></script>
   </body>
 </html>
